@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+
+</head>
+<body>
+    
+    <p id="para1">Hello<br> World</p>
+
+    <button id="btn1">Click here</button>
+    <h1 class="saif"></h1>
+
+
+    <form action="">
+        <input class="a" type="text" placeholder="Enter first name"><br>
+        <input class="b" type="text" placeholder="Enter last name"><br>
+        <button type="button" class="btn2">Click</button>
+    </form>
+    <h1 class="abc"></h1>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               let content = $("#para1").html();
+               $(".saif").text(content);
+                // alert(content);
+            })
+
+            $(".btn2").click(function(){
+                let par1 = $(".a").val();
+                let par2 = $(".b").val();
+                let par3 = par1 +" "+ par2;
+                $(".abc").text(par3);
+                
+            })
+        });
+    </script>
+    
+</body>
+</html>
